@@ -1,0 +1,36 @@
+{
+  "problem_id": "linear_ode_auto_000",
+  "category": "linear_ode",
+  "input": {
+    "equation": "dy/dt + 1.36y = 2.65*exp(-2.1t)",
+    "initial_conditions": {
+      "y(0)": 1.43
+    },
+    "domain": "t >= 0"
+  },
+  "analysis": {
+    "problem_type": "First-order linear ODE",
+    "linearity": "linear",
+    "stiffness": "non-stiff",
+    "symbolic_solution_possible": true
+  },
+  "symbolic_solution": {
+    "method": "Integrating factor",
+    "solution": "-3.58108108108108*exp(-2.1*t) + 5.01108108108108*exp(-1.36*t)",
+    "verified_with": "SymPy"
+  },
+  "numerical_solution": {
+    "solver": "RK45",
+    "time_span": [
+      0,
+      5
+    ],
+    "num_points": 200
+  },
+  "validation": {
+    "strategy": "symbolic_vs_numerical",
+    "status": "PASS",
+    "max_error": 0.0005199923331993261,
+    "tolerance": 0.001
+  }
+}
