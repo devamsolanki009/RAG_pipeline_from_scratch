@@ -1,0 +1,12 @@
+[project]
+name = "rag-pipeline-from-scratch"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "langchain>=1.2.3",
+    "langchain-community>=0.4.1",
+    "langchain-core>=1.2.7",
+    "langchain-openai>=1.1.7",
+]
